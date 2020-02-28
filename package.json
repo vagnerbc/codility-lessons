@@ -1,0 +1,14 @@
+{
+  "name": "codility",
+  "version": "1.0.0",
+  "description": "Implementation of codility lessons in javascript",
+  "main": "index.js",
+  "author": "Vagner Bernal de Castro",
+  "license": "MIT",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "^25.1.0"
+  }
+}
