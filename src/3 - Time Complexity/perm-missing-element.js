@@ -24,6 +24,8 @@ the elements of A are all distinct;
 each element of array A is an integer within the range [1..(N + 1)].
  */
 
+// COMPLEXITY O(n^2) - 70% success
+
 function solution(A) {
   let i = 1;
   for (i; i <= A.length + 1; i++) {
@@ -43,3 +45,5 @@ function solution(A) {
 
   return i;
 }
+
+module.exports = solution;

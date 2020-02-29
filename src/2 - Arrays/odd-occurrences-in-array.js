@@ -34,6 +34,8 @@ each element of array A is an integer within the range [1..1,000,000,000];
 all but one of the values in A occur an even number of times.
  */
 
+// COMPLEXITY O(n^2) - 66% success
+
 function solution(A) {
   value = 0;
 
@@ -59,3 +61,5 @@ function solution(A) {
 
   return value;
 }
+
+module.exports = solution;

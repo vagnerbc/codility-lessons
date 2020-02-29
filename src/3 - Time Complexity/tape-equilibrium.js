@@ -67,3 +67,5 @@ function getTotal(A) {
   }
   return sum;
 }
+
+module.exports = solution;

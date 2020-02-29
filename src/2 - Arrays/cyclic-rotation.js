@@ -66,3 +66,5 @@ function solution(A, K) {
 function isEmpty(A) {
   return A.length <= 0;
 }
+
+module.exports = solution;
