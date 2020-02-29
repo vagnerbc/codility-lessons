@@ -46,7 +46,7 @@ N is an integer within the range [2..100,000];
 each element of array A is an integer within the range [−1,000..1,000].
  */
 
-function solution(A) {
+export default function solution(A) {
   let diferences = [];
   const total = getTotal(A);
 
@@ -61,11 +61,9 @@ function solution(A) {
 }
 
 function getTotal(A) {
-  sum = 0;
+  let sum = 0;
   for (let i = 0; i < A.length; i++) {
     sum += A[i];
   }
   return sum;
 }
-
-module.exports = solution;

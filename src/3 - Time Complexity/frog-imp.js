@@ -28,8 +28,6 @@ X, Y and D are integers within the range [1..1,000,000,000];
 X ≤ Y.
  */
 
-function solution(X, Y, D) {
+export default function solution(X, Y, D) {
   return Math.ceil((Y - X) / D);
 }
-
-module.exports = solution;

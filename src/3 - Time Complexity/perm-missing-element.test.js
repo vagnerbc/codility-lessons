@@ -1,4 +1,4 @@
-const solution = require("./perm-missing-element");
+import solution from "./perm-missing-element";
 
 describe("PermMissingElement tests", () => {
   it("should return the correct value", () => {

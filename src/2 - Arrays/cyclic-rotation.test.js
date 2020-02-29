@@ -1,4 +1,4 @@
-const solution = require("./cyclic-rotation");
+import solution from "./cyclic-rotation";
 
 describe("CyclicRotation tests", () => {
   it("should return the correct value", () => {

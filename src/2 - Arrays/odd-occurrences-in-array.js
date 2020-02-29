@@ -36,8 +36,9 @@ all but one of the values in A occur an even number of times.
 
 // COMPLEXITY O(n^2) - 66% success
 
-function solution(A) {
-  value = 0;
+export default function solution(A) {
+  let value = 0;
+  let hasPair = false;
 
   for (let i = 0; i < A.length; i++) {
     hasPair = false;
@@ -61,5 +62,3 @@ function solution(A) {
 
   return value;
 }
-
-module.exports = solution;

@@ -1,4 +1,4 @@
-const solution = require("./tape-equilibrium");
+import solution from "./tape-equilibrium";
 
 describe("TapeEquilibrium tests", () => {
   it("should return the correct value", () => {

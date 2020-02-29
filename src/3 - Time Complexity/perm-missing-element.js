@@ -26,8 +26,10 @@ each element of array A is an integer within the range [1..(N + 1)].
 
 // COMPLEXITY O(n^2) - 70% success
 
-function solution(A) {
+export default function solution(A) {
   let i = 1;
+  let isMissing = true;
+
   for (i; i <= A.length + 1; i++) {
     isMissing = true;
 
@@ -45,5 +47,3 @@ function solution(A) {
 
   return i;
 }
-
-module.exports = solution;

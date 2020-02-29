@@ -1,4 +1,4 @@
-const solution = require("./binary-gap");
+import solution from "./binary-gap";
 
 describe("BinaryGap tests", () => {
   it("should return the correct value", () => {

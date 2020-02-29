@@ -44,7 +44,7 @@ In your solution, focus on correctness. The performance of your solution will
 not be the focus of the assessment.
 */
 
-function solution(A, K) {
+export default function solution(A, K) {
   if (isEmpty(A)) return A;
 
   for (let i = 0; i < K; i++) {
@@ -66,5 +66,3 @@ function solution(A, K) {
 function isEmpty(A) {
   return A.length <= 0;
 }
-
-module.exports = solution;

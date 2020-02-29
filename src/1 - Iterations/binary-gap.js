@@ -27,7 +27,7 @@ Write an efficient algorithm for the following assumptions:
 N is an integer within the range [1..2,147,483,647].
 */
 
-function solution(N) {
+export default function solution(N) {
   let binary = convertToBinary(N);
 
   const pattern = /10+1/g;
@@ -37,7 +37,7 @@ function solution(N) {
   const matches = binary.match(pattern);
 
   let gaps = [];
-  for (match of matches) {
+  for (let match of matches) {
     gaps.push(match.length - 2);
   }
 
@@ -49,5 +49,3 @@ function convertToBinary(n) {
 
   return binary.replace(/1/g, "11");
 }
-
-module.exports = solution;
