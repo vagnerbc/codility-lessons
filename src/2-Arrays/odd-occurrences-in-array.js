@@ -25,6 +25,9 @@ For example, given array A such that:
   A[0] = 9  A[1] = 3  A[2] = 9
   A[3] = 3  A[4] = 9  A[5] = 7
   A[6] = 9
+
+  [9, 3, 9, 3, 9, 7, 9]
+
 the function should return 7, as explained in the example above.
 
 Write an efficient algorithm for the following assumptions:
@@ -34,31 +37,17 @@ each element of array A is an integer within the range [1..1,000,000,000];
 all but one of the values in A occur an even number of times.
  */
 
-// COMPLEXITY O(n^2) - 66% success
-
+// COMPLEXITY O(n)
 export default function solution(A) {
-  let value = 0;
-  let hasPair = false;
+  let aux = {};
 
   for (let i = 0; i < A.length; i++) {
-    hasPair = false;
-
-    if (A[i] === true) continue;
-
-    for (let k = 0; k < A.length; k++) {
-      if (i != k && A[i] === A[k]) {
-        hasPair = true;
-        A[i] = hasPair;
-        A[k] = hasPair;
-        break;
-      }
-    }
-
-    if (!hasPair) {
-      value = A[i];
-      break;
+    if (aux[A[i]]) {
+      delete aux[A[i]];
+    } else {
+      aux[A[i]] = A[i];
     }
   }
 
-  return value;
+  return Number.parseInt(Object.keys(aux)[0]);
 }
