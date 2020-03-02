@@ -24,26 +24,16 @@ the elements of A are all distinct;
 each element of array A is an integer within the range [1..(N + 1)].
  */
 
-// COMPLEXITY O(n^2) - 70% success
+// TIME COMPLEXITY O(n)
+// SPACE COMPLEXITY O(1)
 
 export default function solution(A) {
-  let i = 1;
-  let isMissing = true;
-
-  for (i; i <= A.length + 1; i++) {
-    isMissing = true;
-
-    for (let k = 0; k < A.length; k++) {
-      if (i === A[k]) {
-        isMissing = false;
-        break;
-      }
-    }
-
-    if (isMissing) {
-      return i;
-    }
+  const length = A.length; // [1,2,3,5] = 4
+  const total = ((length + 1) * (length + 2)) / 2; // [1,2,3,4,5] = 15
+  let sum = 0; // [1,2,3,5] = 11
+  for (let i = 0; i < length; i++) {
+    sum += A[i];
   }
 
-  return i;
+  return total - sum; // 15 - 11 = 4
 }

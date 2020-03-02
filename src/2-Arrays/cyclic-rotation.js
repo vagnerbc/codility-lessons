@@ -44,25 +44,15 @@ In your solution, focus on correctness. The performance of your solution will
 not be the focus of the assessment.
 */
 
+// A = [1,2,3,4], K = 2
 export default function solution(A, K) {
-  if (isEmpty(A)) return A;
+  const length = A.length; // 4
+  let result = [];
 
-  for (let i = 0; i < K; i++) {
-    const size = A.length;
-
-    let before = A[0];
-    A[0] = A[size - 1];
-
-    for (let j = 1; j < size; j++) {
-      let current = A[j];
-      A[j] = before;
-      before = current;
-    }
+  for (let i = 0; i < length; i++) {
+    const newIndex = (i + K) % length; // 2, 3, 0, 1
+    result[newIndex] = A[i]; // [3,4,1,2]
   }
 
-  return A;
-}
-
-function isEmpty(A) {
-  return A.length <= 0;
+  return result;
 }
