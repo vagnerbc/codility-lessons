@@ -47,6 +47,9 @@ not be the focus of the assessment.
 // A = [1,2,3,4], K = 2
 export default function solution(A, K) {
   const length = A.length; // 4
+
+  if (K % length === 0) return A;
+
   let result = [];
 
   for (let i = 0; i < length; i++) {

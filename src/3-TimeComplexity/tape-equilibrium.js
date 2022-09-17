@@ -60,10 +60,25 @@ export default function solution(A) {
   return Math.min(...diferences);
 }
 
-function getTotal(A) {
-  let sum = 0;
-  for (let i = 0; i < A.length; i++) {
-    sum += A[i];
+export function solution2(A = []) {
+  let aux = [];
+  let keys = A.keys();
+
+  for (let index of keys) {
+    if (index === A.length - 1) break;
+
+    const arr1 = A.slice(0, index + 1);
+    const sum1 = getTotal(arr1);
+
+    const arr2 = A.slice(index + 1);
+    const sum2 = getTotal(arr2);
+
+    aux.push(Math.abs(sum1 - sum2));
   }
-  return sum;
+
+  return Math.min(...aux);
+}
+
+function getTotal(arr) {
+  return arr.reduce((prev, curr) => prev + curr);
 }

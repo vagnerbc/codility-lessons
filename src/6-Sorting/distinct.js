@@ -33,3 +33,15 @@ export default function solution(A) {
 
   return count;
 }
+
+export function solution2(A) {
+  let aux = [];
+
+  A.forEach((value) => {
+    if (aux.includes(value)) return;
+
+    aux.push(value);
+  });
+
+  return aux.length;
+}

@@ -29,11 +29,25 @@ each element of array A is an integer within the range [1..(N + 1)].
 
 export default function solution(A) {
   const length = A.length; // [1,2,3,5] = 4
+
   const total = ((length + 1) * (length + 2)) / 2; // [1,2,3,4,5] = 15
-  let sum = 0; // [1,2,3,5] = 11
-  for (let i = 0; i < length; i++) {
-    sum += A[i];
-  }
+
+  const sum = A.reduce((prev, curr) => prev + curr); // [1,2,3,5] = 11
 
   return total - sum; // 15 - 11 = 4
 }
+
+// TIME COMPLEXITY O(n)
+// SPACE COMPLEXITY O(n)
+export const solution2 = (A = []) => {
+  const size = A.length + 2;
+
+  const aux = new Array(size).fill(-1);
+  aux[0] = 0;
+
+  A.forEach((value) => {
+    aux[value] = value;
+  });
+
+  return aux.findIndex((value) => value === -1);
+};
