@@ -36,10 +36,7 @@ export function solution(N) {
 
   const matches = binary.match(pattern);
 
-  let gaps = [];
-  for (let match of matches) {
-    gaps.push(match.length - 2);
-  }
+  const gaps = matches.map((match) => match.length - 2);
 
   return Math.max(...gaps);
 }
@@ -47,7 +44,7 @@ export function solution(N) {
 function convertToBinary(n) {
   let binary = n.toString(2);
 
-  return binary.replace(/1/g, "11");
+  return binary;
 }
 
 export function solution2(N) {
