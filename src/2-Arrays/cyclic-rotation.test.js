@@ -1,4 +1,5 @@
 import solution from "./cyclic-rotation";
+import { solution2 } from "./cyclic-rotation-may2026";
 
 describe("CyclicRotation tests", () => {
   it("should return the correct value", () => {
@@ -8,5 +9,12 @@ describe("CyclicRotation tests", () => {
 
     expect(solution([3, 8, 9, 7, 6], 3)).toEqual([9, 7, 6, 3, 8]);
     expect(solution([0, 0, 0], 1)).toEqual([0, 0, 0]);
+
+    expect(solution2([1, 2, 3, 4], 4)).toEqual([1, 2, 3, 4]);
+    expect(solution2([1, 2, 3, 4], 8)).toEqual([1, 2, 3, 4]);
+    expect(solution2([1, 2, 3, 4], 12)).toEqual([1, 2, 3, 4]);
+    2;
+    expect(solution2([3, 8, 9, 7, 6], 3)).toEqual([9, 7, 6, 3, 8]);
+    expect(solution2([0, 0, 0], 1)).toEqual([0, 0, 0]);
   });
 });
