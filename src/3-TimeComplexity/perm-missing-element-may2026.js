@@ -27,27 +27,26 @@ each element of array A is an integer within the range [1..(N + 1)].
 // TIME COMPLEXITY O(n)
 // SPACE COMPLEXITY O(1)
 
-export default function solution(A = []) {
-  const length = A.length; // [1,2,3,5] = 4
+export function solution3(A = []) {
+  const size = A.length;
 
-  const total = ((length + 1) * (length + 2)) / 2; // [1,2,3,4,5] = 15
+  const sum = ((size + 1) * (size + 2)) / 2;
 
-  const sum = A.reduce((prev, curr) => prev + curr); // [1,2,3,5] = 11
+  const currentSum = A.reduce((prev, curr) => prev + curr);
 
-  return total - sum; // 15 - 11 = 4
+  return sum - currentSum;
 }
 
 // TIME COMPLEXITY O(n)
 // SPACE COMPLEXITY O(n)
-export const solution2 = (A = []) => {
-  const size = A.length + 2;
+export const solution4 = (A = []) => {
+  const size = A.length;
 
-  const aux = new Array(size).fill(-1);
-  aux[0] = 0;
+  for (let i = 1; i <= size + 1; i++) {
+    if (A.indexOf(i) === -1) {
+      return i;
+    }
+  }
 
-  A.forEach((value) => {
-    aux[value] = value;
-  });
-
-  return aux.findIndex((value) => value === -1);
+  return null;
 };
