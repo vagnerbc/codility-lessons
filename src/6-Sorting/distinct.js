@@ -45,3 +45,15 @@ export function solution2(A) {
 
   return aux.length;
 }
+
+export function solutionWithSet(A) {
+  const set = new Set();
+
+  for (const value of A) {
+    if (!set.has(value)) {
+      set.add(value);
+    }
+  }
+
+  return set.size;
+}

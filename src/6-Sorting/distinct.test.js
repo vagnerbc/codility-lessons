@@ -1,4 +1,4 @@
-import solution, { solution2 } from "./distinct";
+import solution, { solution2, solutionWithSet } from "./distinct";
 import { solution3, solution4 } from "./distinct-mai2026";
 
 describe("Distinct tests", () => {
@@ -22,5 +22,10 @@ describe("Distinct tests", () => {
     expect(solution4([4, 2, 2, 1, 3, 4])).toBe(4);
     expect(solution4([2, 2, 2, 4, 2, 2])).toBe(2);
     expect(solution4([2, 2, 2, 4, 2, 1, 1])).toBe(3);
+
+    expect(solutionWithSet([])).toBe(0);
+    expect(solutionWithSet([4, 2, 2, 1, 3, 4])).toBe(4);
+    expect(solutionWithSet([2, 2, 2, 4, 2, 2])).toBe(2);
+    expect(solutionWithSet([2, 2, 2, 4, 2, 1, 1])).toBe(3);
   });
 });
