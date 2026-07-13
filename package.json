@@ -1,20 +1,27 @@
 {
-  "name": "codility",
+  "name": "codility-lessons",
   "version": "1.0.0",
-  "description": "Implementation of codility lessons in javascript",
+  "description": "",
   "main": "index.js",
-  "author": "Vagner Bernal de Castro",
-  "license": "MIT",
   "scripts": {
-    "test": "jest"
+    "test": "npx jest"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vagnerbc/codility-lessons.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vagnerbc/codility-lessons/issues"
+  },
+  "homepage": "https://github.com/vagnerbc/codility-lessons#readme",
   "devDependencies": {
-    "@babel/cli": "^7.8.4",
-    "@babel/core": "^7.8.6",
-    "@babel/node": "^7.8.4",
-    "@babel/preset-env": "^7.8.6",
-    "babel-jest": "^25.1.0",
-    "jest": "^25.1.0",
-    "tsx": "^4.22.4"
+    "@types/jest": "^30.0.0",
+    "@types/node": "^26.1.1",
+    "jest": "^30.4.2",
+    "ts-jest": "^29.4.11",
+    "tsx": "^4.23.1",
+    "typescript": "^7.0.2"
   }
 }

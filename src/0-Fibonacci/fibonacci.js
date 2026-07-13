@@ -2,7 +2,7 @@
 // SPACE COMPLEXITY = O(n)
 export const solutionRecursive = {
   history: [],
-  fibonacci: function(n) {
+  fibonacci: function (n) {
     if (n === 0 || n === 1) {
       return n;
     }
@@ -16,7 +16,7 @@ export const solutionRecursive = {
     }
 
     return this.history[n - 1] + this.history[n - 2];
-  }
+  },
 };
 
 // TIME COMPLEXITY = O(n)

@@ -1,4 +1,14 @@
-import { NodeTree, tree1, tree2 } from "../tree";
+import { NodeTree, tree1 } from "../../DataStructures/tree/tree";
+
+/**
+        1
+      /   \
+     2     3
+    / \   / \
+   4   5 6   7
+ */
+
+// [4, 5, 2, 6, 7, 3, 1]
 
 export function postOrderTraversal(root: NodeTree | null, result: any[] = []) {
   if (root === null) return;

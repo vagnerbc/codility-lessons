@@ -1,4 +1,4 @@
-import { bst1, NodeTree } from "../tree";
+import { bst1, NodeTree } from "../../DataStructures/tree/tree";
 
 /**
  * Using global variable
@@ -27,6 +27,17 @@ import { bst1, NodeTree } from "../tree";
 /**
  * Returning value
  */
+
+/**
+ * 
+          8
+        /   \
+       3     10
+      / \      \
+     1   6      14
+        / \    /
+       4   7  13
+ */
 export function dfs(root: NodeTree | null, value: number = 0) {
   if (!root) return 0;
 
@@ -38,12 +49,12 @@ export function dfs(root: NodeTree | null, value: number = 0) {
 
   const max = Math.max(root.value, lValue, rValue);
 
-  // console.log({
-  //   root: root.value,
-  //   lValue,
-  //   rValue,
-  //   max,
-  // });
+  console.log({
+    root: root.value,
+    lValue,
+    rValue,
+    max,
+  });
 
   return max;
 }

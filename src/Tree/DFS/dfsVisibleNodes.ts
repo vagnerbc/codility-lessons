@@ -1,4 +1,4 @@
-import { bst1, NodeTree } from "../tree";
+import { bst1, NodeTree, tree1, tree2 } from "../../DataStructures/tree/tree";
 
 /*
 In a binary tree, a node is labeled as "visible" if, on the path from the root to that node, there isn't any node with a value higher than this node's value.
