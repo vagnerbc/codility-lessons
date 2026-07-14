@@ -3,7 +3,7 @@ import { solution3, solution4 } from "./binary-gap-may2026";
 
 describe("BinaryGap tests", () => {
   it("should return the correct value", () => {
-    expect(solution(1041)).toBe(5);
+    expect(solution(1041)).toBe(5); // 10000010001
     expect(solution(529)).toBe(4);
     expect(solution(20)).toBe(1);
     expect(solution(32)).toBe(0);

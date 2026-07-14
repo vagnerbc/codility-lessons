@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "npx jest"
+    "test": "node ./node_modules/jest-cli/bin/jest.js"
   },
   "repository": {
     "type": "git",
@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/vagnerbc/codility-lessons#readme",
   "devDependencies": {
+    "@babel/preset-env": "^7.29.7",
+    "@babel/preset-typescript": "^7.29.7",
     "@types/jest": "^30.0.0",
     "@types/node": "^26.1.1",
     "jest": "^30.4.2",

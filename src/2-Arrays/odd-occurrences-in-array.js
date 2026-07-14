@@ -39,16 +39,19 @@ all but one of the values in A occur an even number of times.
 
 // COMPLEXITY O(n)
 export default function solution(A) {
-  let aux = [];
+  let aux = new Map();
 
   A.forEach((num) => {
-    const indexOf = aux.indexOf(num);
-    if (indexOf >= 0) {
-      aux[indexOf] = null;
+    if (aux.has(num)) {
+      aux.delete(num);
     } else {
-      aux.push(num);
+      aux.set(num, num);
     }
   });
 
-  return aux.find((num) => num != null);
+  if (aux.size == 0) return null;
+
+  const keysArr = [...aux.keys()];
+
+  return keysArr[0];
 }
