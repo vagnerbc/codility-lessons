@@ -69,7 +69,7 @@ const main = async () => {
   //     const canWrite = writebleStreamWarningLog.write(chunk);
 
   //     if (!canWrite) {
-  //       readStreamLog.pause();
+  //       transform.pause();
   //     }
   //   });
 
