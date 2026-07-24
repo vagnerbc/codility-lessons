@@ -1,20 +1,26 @@
 import { products } from "../entities/products";
 
-const productsByCategory = products.reduce((acc: any, curr) => {
-  if (!acc[curr.category]) {
-    acc[curr.category] = [];
+const productsByCategory = products.reduce((acc: any, product) => {
+  if (!acc[product.category]) {
+    acc[product.category] = [];
   }
 
-  acc[curr.category].push(curr);
+  acc[product.category].push(product);
 
   return acc;
 }, {});
+
+// const productsByCategory = products.reduce((acc: any, product) => {
+//   acc[product.category] = [...(acc[product.category] || []), product];
+
+//   return acc;
+// }, {});
 
 const main = () => {
   const result = productsByCategory;
 
   console.log({
-    result: JSON.stringify(result),
+    result: result,
   });
 };
 

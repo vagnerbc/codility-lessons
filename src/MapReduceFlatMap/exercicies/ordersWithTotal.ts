@@ -1,5 +1,4 @@
 import { orders } from "../entities/orders";
-import { products } from "../entities/products";
 
 const orderWithTotal = orders.map((order) => {
   return {

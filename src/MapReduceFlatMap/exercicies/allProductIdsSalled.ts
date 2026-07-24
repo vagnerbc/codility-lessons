@@ -1,5 +1,4 @@
 import { orders } from "../entities/orders";
-import { products } from "../entities/products";
 
 const allProductIdsSelled = new Set(
   orders.flatMap((order) => {

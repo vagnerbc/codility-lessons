@@ -1,4 +1,3 @@
-import { orders } from "../entities/orders";
 import { products } from "../entities/products";
 
 const productsByCategory = products.reduce((acc: any, curr) => {
