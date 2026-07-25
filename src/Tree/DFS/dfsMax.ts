@@ -7,11 +7,11 @@ import { bst1, NodeTree } from "../../DataStructures/tree/tree";
 // export function dfs(root: NodeTree | null, value: number = 0) {
 //   if (!root) return null;
 
-//   // console.log(root?.value);
-
 //   if (root.value > value) {
 //     maxValue = root.value;
 //   }
+
+//   console.log({ rootValue: root?.value, value, maxValue });
 
 //   dfs(root.left, maxValue);
 
@@ -38,14 +38,12 @@ import { bst1, NodeTree } from "../../DataStructures/tree/tree";
         / \    /
        4   7  13
  */
-export function dfs(root: NodeTree | null, value: number = 0) {
+export function dfs(root: NodeTree | null) {
   if (!root) return 0;
 
-  // console.log(root.value);
+  const lValue = dfs(root.left);
 
-  const lValue: number = dfs(root.left, value);
-
-  const rValue: number = dfs(root.right, value);
+  const rValue = dfs(root.right);
 
   const max = Math.max(root.value, lValue, rValue);
 
