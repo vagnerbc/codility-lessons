@@ -1,5 +1,3 @@
-import { time } from "console";
-
 const assert = require("assert");
 
 // Implemente uma função que junte os horários de funcionamento de um estabelecimento. A função recebe como um argumento no formato {day, open, close},
