@@ -44,6 +44,30 @@ const main = async () => {
   } catch (error) {
     console.log("Error on generating warnings log", error);
   }
+
+  // readStream.on("data", (chunk) => {
+  //   const write = transform.write(chunk);
+
+  //   if (!write) {
+  //     readStream.pause();
+  //   }
+  // });
+
+  // transform.on("drain", () => {
+  //   readStream.resume();
+  // });
+
+  // transform.on("data", (chunk) => {
+  //   const write = writeStream.write(chunk);
+
+  //   if (!write) {
+  //     transform.pause();
+  //   }
+  // });
+
+  // writeStream.on("drain", () => {
+  //   transform.resume();
+  // });
 };
 
 main();

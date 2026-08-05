@@ -49,33 +49,33 @@ const main = async () => {
   }
 
   //   manual control
-  //   readStreamLog.on("data", (chunk) => {
-  //     const canWrite = transform.write(chunk);
+  // readStreamLog.on("data", (chunk) => {
+  //   const canWrite = transform.write(chunk);
 
-  //     if (!canWrite) {
-  //       readStreamLog.pause();
-  //     }
-  //   });
+  //   if (!canWrite) {
+  //     readStreamLog.pause();
+  //   }
+  // });
 
-  //   transform.on("drain", () => {
-  //     readStreamLog.resume();
-  //   });
+  // transform.on("drain", () => {
+  //   readStreamLog.resume();
+  // });
 
-  //   readStreamLog.on("end", () => {
-  //     transform.end();
-  //   });
+  // readStreamLog.on("end", () => {
+  //   transform.end();
+  // });
 
-  //   transform.on("data", (chunk) => {
-  //     const canWrite = writebleStreamWarningLog.write(chunk);
+  // transform.on("data", (chunk) => {
+  //   const canWrite = writebleStreamWarningLog.write(chunk);
 
-  //     if (!canWrite) {
-  //       transform.pause();
-  //     }
-  //   });
+  //   if (!canWrite) {
+  //     transform.pause();
+  //   }
+  // });
 
-  //   writebleStreamWarningLog.on("drain", () => {
-  //     transform.resume();
-  //   });
+  // writebleStreamWarningLog.on("drain", () => {
+  //   transform.resume();
+  // });
 };
 
 main();
