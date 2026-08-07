@@ -1,9 +1,11 @@
+// More flexible of Interfaces. Better for unions, primitive data and complex types (generics etc)
 type User = {
   name: String;
   email: String;
   age?: Number;
 };
 
+// Usualy more used to represent object and contracts,
 interface IUser {
   name: String;
 }
