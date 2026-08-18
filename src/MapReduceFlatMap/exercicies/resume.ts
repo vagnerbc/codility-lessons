@@ -8,7 +8,7 @@ import { products } from "../entities/products";
   pendingOrders: 1,
   cancelledOrders: 1,
   totalRevenue: 5120,
-  totalItemsSold: 6
+  totalItemsSold: 7
 }
  */
 

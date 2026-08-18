@@ -1,5 +1,7 @@
 import { products } from "../entities/products";
 
+// { result: 44310 }
+
 const totalStock = products.reduce(
   (acc, curr) => acc + curr.stock * curr.price,
   0,

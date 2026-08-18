@@ -55,10 +55,23 @@ enum TypesStr {
 
 TypesStr.basic.includes("basic");
 
-// ReturnType<T>
-// Parameters<T>
+const userKey: keyof User = "name";
 
-// Keyof<T>
+function test(param1: string, param2: string): { result: number } {
+  return {
+    result: 10,
+  };
+}
+
+// Parameters<T>
+type Params = Parameters<typeof test>;
+const params: Params = ["str1", "str2"];
+
+// ReturnType<T>
+type Returns = ReturnType<typeof test>;
+const returns: Returns = {
+  result: 45,
+};
 
 // DECORATOS - Add metadata and modify classes - EX: @Entity
 
