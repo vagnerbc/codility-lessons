@@ -1,7 +1,9 @@
 import { products } from "../entities/products";
 
-const productsByCategory = products.reduce((acc: any, curr) => {
-  acc[curr.category] = (acc[curr.category] || 0) + 1;
+// { result: { electronics: 3, furniture: 2, kitchen: 1 } }
+
+const productsByCategory = products.reduce((acc: any, product) => {
+  acc[product.category] = (acc[product.category] || 0) + 1;
 
   return acc;
 }, {});

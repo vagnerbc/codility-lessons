@@ -78,3 +78,22 @@ const returns: Returns = {
 /**
  * any, unknow, void, never
  */
+
+const testFunction = (): void => {};
+const testFunctionNever = (): never => {
+  throw new Error("Should never return value");
+};
+
+const value: any = "str";
+const valueUnknow: unknown = "str";
+
+const upper = value.toUpperCase();
+
+// `typeof` is the correct check for a primitive string.
+const upper2 = typeof valueUnknow === "string" ? valueUnknow.toUpperCase() : "";
+
+// `instanceof` checks objects created with a constructor. The order is
+// `value instanceof Constructor`, and it does not match primitive strings.
+const boxedString: unknown = new String("str");
+const upper3 =
+  boxedString instanceof String ? boxedString.toString().toUpperCase() : "";

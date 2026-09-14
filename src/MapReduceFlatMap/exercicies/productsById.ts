@@ -1,7 +1,7 @@
 import { products } from "../entities/products";
 
-const productsById = products.reduce((acc: any, curr) => {
-  acc[curr.id] = curr;
+const productsById = products.reduce((acc: any, product) => {
+  acc[product.id] = product;
 
   return acc;
 }, {});

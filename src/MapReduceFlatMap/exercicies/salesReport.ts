@@ -37,6 +37,7 @@ import { products } from "../entities/products";
 
 const productByProductID = products.reduce((acc: any, product) => {
   acc[product.id] = product;
+
   return acc;
 }, {});
 
@@ -47,13 +48,12 @@ const salesReport = orders
       if (!acc[item.productId]) {
         acc[item.productId] = {
           productId: item.productId,
-          name: productByProductID[item.productId]?.name || " - ",
+          name: productByProductID[item.productId]?.name,
           quantitySold: 0,
           totalRevenue: 0,
         };
       }
-
-      acc[item.productId].quantitySold += item.quantity;
+      acc[item.productId].quantitySold++;
       acc[item.productId].totalRevenue += item.quantity * item.unitPrice;
     });
 

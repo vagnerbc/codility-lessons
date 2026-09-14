@@ -31,13 +31,37 @@ const userByUserID = users.reduce((acc: any, user) => {
   return acc;
 }, {});
 
+// const clientReport = orders.reduce((acc: any, order) => {
+//   if (!acc[order.userId]) {
+//     acc[order.userId] = {
+//       userId: order.userId,
+//       name: userByUserID[order.userId]?.name,
+//       totalOrders: 0,
+//       totalPaidOrders: 0,
+//       totalSpent: 0,
+//     };
+//   }
+
+//   acc[order.userId].totalOrders++;
+
+//   if (order.status === "paid") {
+//     acc[order.userId].totalPaidOrders++;
+
+//     acc[order.userId].totalSpent += order.items.reduce((prev, item) => {
+//       return prev + item.quantity * item.unitPrice;
+//     }, 0);
+//   }
+
+//   return acc;
+// }, {});
+
 const clientReport = {} as any;
 
 orders.forEach((order) => {
   if (!clientReport[order.userId]) {
     clientReport[order.userId] = {
       userId: order.userId,
-      name: userByUserID[order.userId]?.name || "No name",
+      name: userByUserID[order.userId]?.name,
       totalOrders: 0,
       totalPaidOrders: 0,
       totalSpent: 0,
@@ -49,10 +73,15 @@ orders.forEach((order) => {
   if (order.status === "paid") {
     clientReport[order.userId].totalPaidOrders++;
 
-    clientReport[order.userId].totalSpent += order.items.reduce((acc, item) => {
-      return acc + item.quantity * item.unitPrice;
-    }, 0);
+    clientReport[order.userId].totalSpent += order.items.reduce(
+      (prev, item) => {
+        return prev + item.quantity * item.unitPrice;
+      },
+      0,
+    );
   }
+
+  return clientReport;
 });
 
 const main = () => {
