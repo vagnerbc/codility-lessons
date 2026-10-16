@@ -33,7 +33,6 @@ const generateWarningLogs = async () => {
     flags: "w",
   });
 
-  pipeline;
   try {
     await pipeline(rl, transform, writeStream);
   } catch (error) {
