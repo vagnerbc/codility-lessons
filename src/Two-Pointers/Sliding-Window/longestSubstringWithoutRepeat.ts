@@ -1,7 +1,7 @@
 // [a,b,c,c,a,b,c]
 // Return 3  -> [a,b,c]
 
-export const longestSubscring = (arr = []) => {
+export const longestSubstring = (arr = []) => {
   let longest = 0;
   let l = 0;
   let window = new Set();
